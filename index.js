@@ -14,17 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
       answer: true ,
       explanation: "The creater of this project is Yashas"
     }
-  
     // TODO 3: Set the text of the statement element to the fact's statement
     statement.textContent = fact.statement;
-
-
     // TODO 4: Declare disable & enable functions to set or remove the "disabled" attribute from a given button element
+    const disable = (button) => button.setAttribute("disabled", "");
+    
+    const enable = (button) => button.removeAttribute("disabled");
+    
     
     // disable(button) should set the button element's attribute "disabled" to the value ""
+    disable(answer[1]);
 
     // enable(button) should remove the attribute "disabled" from the button element
- 
+    enable(answer[0]);
 
     // TODO 5: Declare an isCorrect function that compares a guess to the right answer
     // isCorrect(guess) should return true if the guess matches the fact's answer
