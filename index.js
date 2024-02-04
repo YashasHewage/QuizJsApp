@@ -98,9 +98,7 @@ const element1 = document.querySelector('h1');
 element1.addEventListener("mouseover", function() {
   element1.textContent = "hovering";
 });
-element1.addEventListener("movesout", function() {
-  element1.textContent = "Quiz.js";
-});
+
 
 
 
