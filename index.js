@@ -15,19 +15,47 @@ const optionButtons = document.getElementById("options").children;
 
 const explanation = document.getElementById("explanation");
 
+
+const nextButton = document.getElementById("next-question");
+
 // TODO 2: Declare & assign a variable called fact
 // Its value should be an object with a statement, true/false answer, and explanation 
+
+
 const fact = {
-  statement : "'1' + '1' === '2'",
-  answer : false,
-  explanation : "The plus operator concatenates (joins together) strings, so '1' + '1' === '11'."
 
-    };
+  statement: [
+    "JavaScript was invented in 1995",
+    "Strings in JS are editable values",
+    "1 + 1 === 2",
+    "'1' + '1' === '2'",
+    "typeof ['J', 'S'] === 'array'",
+  ],
 
+  answer: [
+    true,
+    false,
+    true,
+    false,
+    false
+  ],
+
+  fact: [
+    "Brendan Eich created JS at Netscape in 1995. The initial version of the language was written in just 10 days.",
+    "In JavaScript strings are immutable values, meaning they cannot be edited; however, they can replaced with new, different strings.",
+    "The plus operator gives the sum of two numbers.",
+    "The plus operator concatenates (joins together) strings, so '1' + '1' === '11'.",
+    "Arrays have the type 'object'. In JS, everything is either a primitive data type (e.g. 'string', 'number') or an object. Arrays are a kind of object with some special properties."
+  ]
+
+};
 
 // TODO 3: Set the text of the statement element to the fact's statement
 
-statement.textContent = fact.statement;
+
+statement.textContent = function (statement) {
+  fact.statement
+}
 
 
 
@@ -39,7 +67,7 @@ function disable (button){
 
 
 function enable(button){
-      button.removeAttribute("disabled","");
+      button.removeAttribute("disabled","");sss
     }
    
 
@@ -56,9 +84,12 @@ function enable(button){
 
 // TODO 5: Declare an isCorrect function that compares a guess to the right answer
 // isCorrect(guess) should return true if the guess matches the fact's answer
+for (i=0;i>5;i++){
+
+
 
 function isCorrect(guess){
-      return guess === fact.answer.toString();
+      return guess === fact.answer[i].toString();
       
     }
 
@@ -66,30 +97,6 @@ function isCorrect(guess){
  
 
 // TODO 6A: Use a for loop to add a click event listener to each of the optionButtons
-
-
-// for (i=0;i<=1;i++){
-//   optionButtons[i].addEventListener("click",function(){
-//     explanation.textContent = fact.explanation;
-//   })
-
-// }
-
-// optionButtons[0].addEventListener("click", function(event) {
-//     optionButtons[0].textContent = optionButtons[0].textContent.toUpperCase();
-//     console.log(event.target);
-// });
-
-
-
-
-
-
-
-
-
-
-
 
 
 // TODO 6B: Within the event handler function, display the fact's explanation by setting the text of the explanation element
@@ -101,7 +108,7 @@ function isCorrect(guess){
 for (let option of optionButtons) {
   option.addEventListener("click", function(event) {
     //optionButtons.setAttribute("disabled", "");
-    explanation.textContent = fact.explanation;
+    explanation.textContent = fact.explanation[i];
 
    
 
@@ -114,7 +121,7 @@ for (let i=0; i<=1; i++){
 
 // Get the guessed value from the clicked button
 const guess = event.target.value;
-console.log(guess);
+
 
 
 
@@ -127,60 +134,18 @@ else{
 }
 // and add the "correct"/"incorrect" class as appropriate
 
-
-
-
-
 });
 }
-
-// const element1 = document.querySelector("h1");
-// //query selector targets the first element that css selector comes upon 
-
-
-
-
-// element1.addEventListener("mouseover", function() {
-//   element1.textContent = "hovering";
-// });
-
-// element1.addEventListener("mouseout", function (){
-//   element1.textContent = "Quiz.js";
-// })
+if (optionButtons.hasAttribute("disabled",""){
+  enable(nextButton);
+}
+nextButton.addEventListener ("click",function (){
+  
 
 
-
-// function nameLongerThan(firstname,lastname){
-//   if(firstname.legnth > lastname.legnth){
-//     console.log ("Your firstName: " + firstname + " is Longer Than your lastName: " + lastname);
-//   }
-//   else{
-//     console.log("your last name is longer bitch");
-//   }
+})
 
 
-
-
-// }
-
-// nameLongerThan("yashasssss","hewageeeeeeeeeeeeeeeee");
-
-// const arr1 = [];
-
-// function isEmpty(array) {
-//   if(array.length === 0) {
-//     return true;
-//   } else {
-//     return false
-//   }
-// }
-
-
-
-
-
-// console.log(isEmpty(arr1));
-// console.log(isEmpty([]));
 
 
 
