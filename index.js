@@ -18,9 +18,9 @@ const explanation = document.getElementById("explanation");
 // TODO 2: Declare & assign a variable called fact
 // Its value should be an object with a statement, true/false answer, and explanation 
 const fact = {
-      statement: "hey my name is yashas",
-      answer: true,
-      explanation: "yes your name is yashas because your mom gave you the name of yashas"
+  statement : "'1' + '1' === '2'",
+  answer : false,
+  explanation : "The plus operator concatenates (joins together) strings, so '1' + '1' === '11'."
 
     };
 
@@ -58,22 +58,36 @@ function enable(button){
 // isCorrect(guess) should return true if the guess matches the fact's answer
 
 function isCorrect(guess){
-      return guess === fact.answer;
+      return guess === fact.answer.toString();
       
     }
 
-console.log(isCorrect(true));
 
+ 
 
 // TODO 6A: Use a for loop to add a click event listener to each of the optionButtons
 
 
-for (i=0;i<=1;i++){
-  optionButtons[i].addEventListener("click",function(){
-    explanation.textContent = fact.explanation;
-  })
+// for (i=0;i<=1;i++){
+//   optionButtons[i].addEventListener("click",function(){
+//     explanation.textContent = fact.explanation;
+//   })
 
-}
+// }
+
+// optionButtons[0].addEventListener("click", function(event) {
+//     optionButtons[0].textContent = optionButtons[0].textContent.toUpperCase();
+//     console.log(event.target);
+// });
+
+
+
+
+
+
+
+
+
 
 
 
@@ -81,26 +95,96 @@ for (i=0;i<=1;i++){
 // TODO 6B: Within the event handler function, display the fact's explanation by setting the text of the explanation element
 
 
+
 // TODO 7: Within the event handler function, 
 // Use a for loop to disable all the option buttons
+for (let option of optionButtons) {
+  option.addEventListener("click", function(event) {
+    //optionButtons.setAttribute("disabled", "");
+    explanation.textContent = fact.explanation;
 
+   
 
 
 // TODO 8: Within the event handler function,
+for (let i=0; i<=1; i++){
+  optionButtons[i].setAttribute("disabled" , "");
+  
+}
+
 // Get the guessed value from the clicked button
+const guess = event.target.value;
+console.log(guess);
+
+
+
 // Use a conditional to compare the guess to the fact's answer
+if(isCorrect(guess)){
+  event.target.classList.add("correct");
+}
+else{
+  event.target.classList.add("incorrect");
+}
 // and add the "correct"/"incorrect" class as appropriate
 
 
 
-const element1 = document.querySelector('h1');
 
-element1.addEventListener("mouseover", function() {
-  element1.textContent = "hovering";
+
 });
+}
+
+// const element1 = document.querySelector("h1");
+// //query selector targets the first element that css selector comes upon 
+
+
+
+
+// element1.addEventListener("mouseover", function() {
+//   element1.textContent = "hovering";
+// });
+
+// element1.addEventListener("mouseout", function (){
+//   element1.textContent = "Quiz.js";
+// })
+
+
+
+// function nameLongerThan(firstname,lastname){
+//   if(firstname.legnth > lastname.legnth){
+//     console.log ("Your firstName: " + firstname + " is Longer Than your lastName: " + lastname);
+//   }
+//   else{
+//     console.log("your last name is longer bitch");
+//   }
+
+
+
+
+// }
+
+// nameLongerThan("yashasssss","hewageeeeeeeeeeeeeeeee");
+
+// const arr1 = [];
+
+// function isEmpty(array) {
+//   if(array.length === 0) {
+//     return true;
+//   } else {
+//     return false
+//   }
+// }
 
 
 
 
 
-          });
+// console.log(isEmpty(arr1));
+// console.log(isEmpty([]));
+
+
+
+
+
+
+           });
