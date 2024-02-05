@@ -68,30 +68,6 @@ function isCorrect(guess){
 // TODO 6A: Use a for loop to add a click event listener to each of the optionButtons
 
 
-// for (i=0;i<=1;i++){
-//   optionButtons[i].addEventListener("click",function(){
-//     explanation.textContent = fact.explanation;
-//   })
-
-// }
-
-// optionButtons[0].addEventListener("click", function(event) {
-//     optionButtons[0].textContent = optionButtons[0].textContent.toUpperCase();
-//     console.log(event.target);
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
 // TODO 6B: Within the event handler function, display the fact's explanation by setting the text of the explanation element
 
 
@@ -114,7 +90,7 @@ for (let i=0; i<=1; i++){
 
 // Get the guessed value from the clicked button
 const guess = event.target.value;
-console.log(guess);
+
 
 
 
@@ -127,61 +103,8 @@ else{
 }
 // and add the "correct"/"incorrect" class as appropriate
 
-
-
-
-
 });
 }
-
-// const element1 = document.querySelector("h1");
-// //query selector targets the first element that css selector comes upon 
-
-
-
-
-// element1.addEventListener("mouseover", function() {
-//   element1.textContent = "hovering";
-// });
-
-// element1.addEventListener("mouseout", function (){
-//   element1.textContent = "Quiz.js";
-// })
-
-
-
-// function nameLongerThan(firstname,lastname){
-//   if(firstname.legnth > lastname.legnth){
-//     console.log ("Your firstName: " + firstname + " is Longer Than your lastName: " + lastname);
-//   }
-//   else{
-//     console.log("your last name is longer bitch");
-//   }
-
-
-
-
-// }
-
-// nameLongerThan("yashasssss","hewageeeeeeeeeeeeeeeee");
-
-// const arr1 = [];
-
-// function isEmpty(array) {
-//   if(array.length === 0) {
-//     return true;
-//   } else {
-//     return false
-//   }
-// }
-
-
-
-
-
-// console.log(isEmpty(arr1));
-// console.log(isEmpty([]));
-
 
 
 
