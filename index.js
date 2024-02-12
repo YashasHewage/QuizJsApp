@@ -67,8 +67,12 @@ function disable (button){
 
 
 function enable(button){
+<<<<<<< HEAD
       button.removeAttribute("disabled","");lol baby
       
+=======
+      button.removeAttribute("disabled","");lfdddfadfasdads
+>>>>>>> main
     }
    
 
