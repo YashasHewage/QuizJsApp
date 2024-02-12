@@ -67,7 +67,11 @@ function disable (button){
 
 
 function enable(button){
+<<<<<<< HEAD
       button.removeAttribute("disabled","");fucking simpmsfcfads
+=======
+      button.removeAttribute("disabled","");hai
+>>>>>>> testing
       
     }
    
