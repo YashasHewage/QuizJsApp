@@ -67,7 +67,8 @@ function disable (button){
 
 
 function enable(button){
-      button.removeAttribute("disabled","");lfdddfadfasdads
+      button.removeAttribute("disabled","");fucking simpmsfcfads
+      
     }
    
 
