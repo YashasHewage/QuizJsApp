@@ -134,6 +134,7 @@ const guess = event.target.value;
 
 
 
+
 // Use a conditional to compare the guess to the fact's answer
 if(isCorrect(guess)){
   event.target.classList.add("correct");
